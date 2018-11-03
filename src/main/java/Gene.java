@@ -43,7 +43,7 @@ public class Gene {
     /**
      * The method returns an array of y-components
      */
-    private double[] getY() {
+    public double[] getY() {
         return y;
     }
 
