@@ -1,3 +1,6 @@
+import org.mariuszgromada.math.mxparser.Expression;
+import org.mariuszgromada.math.mxparser.Function;
+
 import java.util.LinkedList;
 import java.util.Random;
 
@@ -214,6 +217,27 @@ public class BinaryGeneTree {
             strings[x] = operationSet.get(new Random().nextInt(operationSet.size()));
         }
         binaryGeneTree = strings;
+    }
+
+    /**
+     * This method gets function from string equivalent using the mXparser
+     * library (is an open-source mathematical expressions parser/evaluator
+     * providing abilities to calculate various expressions at a runtime )
+     */
+    Gene getFunction(String string) {
+        Function function = new Function("f(x)=" + string);
+        double[] x = new double[61];
+        double[] y = new double[61];
+        int de = 0;
+        for (double d = 0; d < 61; d++) {
+            Expression expression = new Expression("f(" + d + ")", function);
+            //mXparser.consolePrintln(expression.getExpressionString() + "=" + expression.calculate());     --> show result
+            y[de] = expression.calculate();
+            x[de] = d;
+            de++;
+        }
+
+        return new Gene(x, y);
     }
 
 
