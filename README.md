@@ -1,4 +1,4 @@
 # FunctionAproximation
 Genetics algorithm for function approximation.
 ----------------------------------------------
-Вocumentation will be here soon
+Documentation will be here soon
