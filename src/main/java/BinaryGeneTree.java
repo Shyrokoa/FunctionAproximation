@@ -8,7 +8,6 @@ public class BinaryGeneTree {
 
     private static LinkedList<String> xSet;                 //set of variables
     private static LinkedList<String> operationSet;         //set of operation
-
     private static String[] binaryGeneTree = new String[15];
 
     /**
@@ -39,9 +38,15 @@ public class BinaryGeneTree {
 
     }
 
-    /**
-     * This method creates a set of variables
-     */
+    private void createOperandSet() {
+        LinkedList<String> myOperandSet = new LinkedList<>();
+        myOperandSet.add("+");
+        myOperandSet.add("-");
+        myOperandSet.add("*");
+        myOperandSet.add("/");
+        operationSet = myOperandSet;
+    }
+
     private void createXSet() {
         LinkedList<String> myXSet = new LinkedList<>();
         myXSet.add("x");
@@ -52,18 +57,6 @@ public class BinaryGeneTree {
             myXSet.add(Integer.toString(i));
         }
         xSet = myXSet;
-    }
-
-    /**
-     * This method creates a set of operations
-     */
-    private void createOperandSet() {
-        LinkedList<String> myOperandSet = new LinkedList<>();
-        myOperandSet.add("+");
-        myOperandSet.add("-");
-        myOperandSet.add("*");
-        myOperandSet.add("/");
-        operationSet = myOperandSet;
     }
 
     /**

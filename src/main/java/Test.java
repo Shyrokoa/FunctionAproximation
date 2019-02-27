@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Test {
 
-    private final static String PATH = "C:\\Users\\shyrokoa\\IdeaProjects\\FunctionAproximation\\src\\main\\resources\\coordinate.txt";
+    private final static String PATH = "C:\\Users\\Andrii\\FunctionAproximation\\src\\main\\resources\\coordinate.txt";
 
     public static void main(String[] args) {
 
